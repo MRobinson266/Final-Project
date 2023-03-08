@@ -9,13 +9,7 @@ import tkinter as tk
 from tkinter.ttk import *
 
 import random
-
-def parse_input(input_string):
-    if input_string.strip() in {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10"}:
-        return int(input_string)
-    else:
-        roll_results = "Please enter a number from 1 to 10."
-            
+        
 def roll_dice():
     dice_type_input = float(dice_type_entry.get())
     num_dice_input = int(dice_num_entry.get())
@@ -106,7 +100,7 @@ dice_type_label.pack()
 dice_type_entry = tk.Entry(master)
 dice_type_entry.pack()
 
-dice_num_label = tk.Label(master, text="How many dice do you want rolled? (1-10)")
+dice_num_label = tk.Label(master, text="How many dice do you want rolled?")
 dice_num_label.pack()
 dice_num_entry = tk.Entry(master)
 dice_num_entry.pack()
@@ -133,7 +127,3 @@ master.mainloop()
 
 dice_type_input = float(dice_type_entry.get())
 num_dice_input = int(dice_num_entry.get())
-num_dice = parse_input(num_dice_input)
-roll_results = roll_dice(num_dice)
-
-
